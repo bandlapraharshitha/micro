@@ -19,8 +19,8 @@
 ---
 
 ### 🔗 Project Links
-- **GitHub Repository:** `[Add your GitHub link here]`
-- **Live Deployment URL:** `[Add your Live Deployment link here]`
+- **GitHub Repository:** [https://github.com/bandlapraharshitha/micro.git](https://github.com/bandlapraharshitha/micro.git)
+- **Live Deployment URL:** [https://micro-one-zeta.vercel.app/](https://micro-one-zeta.vercel.app/)
 
 ---
 
@@ -273,8 +273,8 @@ micro_project-2/
 
 ### 1. Clone & Configure Environment Files
 ```bash
-git clone <repository-url>
-cd micro_project-2
+git clone https://github.com/bandlapraharshitha/micro.git
+cd micro
 
 # Setup backend environment
 cp backend/.env.example backend/.env
