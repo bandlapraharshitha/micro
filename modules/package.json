@@ -1,0 +1,21 @@
+{
+  "name": "huffman-simulator-modules",
+  "version": "1.0.0",
+  "description": "FLAT (Formal Languages & Automata Theory) and COA (Computer Organization & Architecture) JavaScript modules for Huffman-compressed instruction memory simulation",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "flat",
+    "coa",
+    "automata",
+    "dfa",
+    "huffman",
+    "instruction-memory",
+    "microarchitecture"
+  ],
+  "author": "",
+  "license": "MIT"
+}

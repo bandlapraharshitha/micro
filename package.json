@@ -1,0 +1,31 @@
+{
+  "name": "huffman-compressed-microarchitecture-simulator",
+  "version": "1.0.0",
+  "description": "Cross-disciplinary simulator integrating DAA (Huffman Compression), FLAT (NFA/DFA Automata), and COA (Microprogrammed Control Unit)",
+  "type": "module",
+  "scripts": {
+    "test:flat": "node --test tests/flat-automata.test.js",
+    "test:coa": "node --test tests/coa-simulator.test.js",
+    "test:bridge": "node --test tests/simulation-bridge.test.js",
+    "test:modules": "node --test modules/tests/flat.test.js modules/tests/coa.test.js",
+    "test": "node --test tests/flat-automata.test.js tests/coa-simulator.test.js tests/simulation-bridge.test.js modules/tests/flat.test.js modules/tests/coa.test.js",
+    "test:routes": "node tests/route-verifier.js",
+    "frontend:install": "npm --prefix frontend install",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "daa",
+    "flat",
+    "coa",
+    "huffman-compression",
+    "dfa",
+    "nfa",
+    "microarchitecture",
+    "fastapi",
+    "nextjs"
+  ],
+  "author": "Bandla Praharshitha",
+  "license": "MIT"
+}
+
