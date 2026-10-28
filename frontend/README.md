@@ -1,5 +1,14 @@
 # Next.js Frontend Dashboard & Interactive Subject Labs
 
+[![Demo](https://img.shields.io/badge/Demo-Live%20on%20Vercel-blue?logo=vercel)](https://micro-one-zeta.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/bandlapraharshitha/micro.git)
+
+**Project Links:**
+- **GitHub Repository:** [https://github.com/bandlapraharshitha/micro.git](https://github.com/bandlapraharshitha/micro.git)
+- **Live Demo Link:** [https://micro-one-zeta.vercel.app/](https://micro-one-zeta.vercel.app/)
+
+---
+
 This web application serves as the interactive visualization interface for the *Huffman-Compressed Micro-Architecture Instruction Memory Simulator*. It is built using **Next.js 16 (App Router)**, **React 19**, **Tailwind CSS v4**, **@xyflow/react (React Flow)** for graph and tree visualizations, and **Recharts** for performance metrics.
 
 ---

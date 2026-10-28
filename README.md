@@ -18,9 +18,9 @@
 
 ---
 
-### 🔗 Project Links
+### 🔗 Project & Demo Links
 - **GitHub Repository:** [https://github.com/bandlapraharshitha/micro.git](https://github.com/bandlapraharshitha/micro.git)
-- **Live Deployment URL:** [https://micro-one-zeta.vercel.app/](https://micro-one-zeta.vercel.app/)
+- **Live Demo Link:** [https://micro-one-zeta.vercel.app/](https://micro-one-zeta.vercel.app/)
 
 ---
 
