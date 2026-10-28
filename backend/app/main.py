@@ -1,15 +1,24 @@
 import sys
 from pathlib import Path
 
-# Ensure backend directory is in sys.path for unified import resolution
-_backend_dir = str(Path(__file__).resolve().parent.parent)
-if _backend_dir not in sys.path:
-    sys.path.insert(0, _backend_dir)
+# Ensure both backend directory and root directory are in sys.path
+_app_dir = Path(__file__).resolve().parent
+_backend_dir = _app_dir.parent
+_workspace_dir = _backend_dir.parent
+
+for _p in (str(_backend_dir), str(_workspace_dir)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.core.config import settings
-from backend.app.api.routes import router as api_router
+
+try:
+    from app.core.config import settings
+    from app.api.routes import router as api_router
+except ImportError:
+    from backend.app.core.config import settings
+    from backend.app.api.routes import router as api_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -19,10 +28,11 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
-# CORS configuration to enable communication with the Next.js frontend
+# CORS configuration to enable communication with the Next.js frontend (local and deployed)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
+    allow_origin_regex=r"^https:\/\/.*\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -304,6 +304,26 @@ npm install
 cd ..
 ```
 
+### Deploy Backend to Cloud (Render / Railway)
+The backend includes ready-to-use configuration files for instant cloud deployment:
+- [`backend/Procfile`](file:///c:/Users/praha/Downloads/micro_project-2/backend/Procfile) & [`Procfile`](file:///c:/Users/praha/Downloads/micro_project-2/Procfile)
+- [`render.yaml`](file:///c:/Users/praha/Downloads/micro_project-2/render.yaml) (Render Blueprint)
+- [`backend/Dockerfile`](file:///c:/Users/praha/Downloads/micro_project-2/backend/Dockerfile) (Container deployment)
+- [`api/index.py`](file:///c:/Users/praha/Downloads/micro_project-2/api/index.py) (Vercel Python Serverless)
+
+#### Option 1: Render.com (Recommended Free Deployment)
+1. Go to [render.com](https://render.com) and create a **New Web Service** pointing to your GitHub repository: `https://github.com/bandlapraharshitha/micro.git`
+2. Configure settings:
+   - **Root Directory:** `backend`
+   - **Environment:** `Python 3`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+3. Add Environment Variables:
+   - `FRONTEND_URL` = `https://micro-one-zeta.vercel.app`
+   - `CORS_ORIGINS` = `["https://micro-one-zeta.vercel.app","http://localhost:3000"]`
+4. Once deployed, copy your Render backend URL (e.g. `https://daa-backend.onrender.com`) and add it to your Vercel project environment variables:
+   - `NEXT_PUBLIC_API_URL` = `https://<your-backend-app>.onrender.com`
+
 ---
 
 ## 10. Commands to Run Services

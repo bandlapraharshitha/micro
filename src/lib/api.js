@@ -12,7 +12,7 @@
 
 const DEFAULT_API_BASE_URL =
   (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_API_URL) ||
-  'http://127.0.0.1:8000';
+  (typeof window !== 'undefined' ? '' : 'http://127.0.0.1:8000');
 
 export class DaaApiClient {
   /**
